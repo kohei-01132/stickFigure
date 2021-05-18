@@ -1,0 +1,117 @@
+.stage {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 100px;
+  box-sizing: border-box;
+}
+.main {
+  position: relative;
+}
+.main-stage {
+  width: 200px;
+  height: 200px;
+  animation: jump 1.5s ease-in-out 0s infinite normal none;
+}
+
+@keyframes jump {
+  10% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-70px);
+  }
+  90% {
+    transform: translateY(0px);
+  }
+}
+.head {
+  position: absolute;
+  top: 100px;
+  right: 90px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+.body {
+  position: absolute;
+  top: 132px;
+  right: 105px;
+  width: 2px;
+  height: 50px;
+  background-color: #000;
+}
+.right-hand {
+  position: absolute;
+  top: 136px;
+  right: 97px;
+  width: 2px;
+  height: 25px;
+  background-color: #000;
+  transform: rotate(-45deg);
+}
+.left-hand {
+  position: absolute;
+  top: 136px;
+  right: 113px;
+  width: 2px;
+  height: 25px;
+  background-color: #000;
+  transform: rotate(45deg);
+}
+.right-leg {
+  position: absolute;
+  top: 181px;
+  right: 99px;
+  width: 2px;
+  height: 25px;
+  background-color: #000;
+  transform: rotate(-23deg);
+}
+.left-leg {
+  position: absolute;
+  top: 181px;
+  right: 110px;
+  width: 2px;
+  height: 25px;
+  background-color: #000;
+  transform: rotate(23deg);
+}
+.box {
+  display: flex;
+  &1 {
+    position: relative;
+    bottom: 13px;
+    right: -46px;
+    background-color: green;
+    width: 100px;
+    height: 20px;
+    animation: boxmove1 3s linear 0s infinite normal none;
+  }
+  &2 {
+    position: relative;
+    bottom: 33px;
+    right: -220px;
+    background-color: green;
+    width: 100px;
+    height: 40px;
+    animation: boxmove1 3s linear 0s infinite normal none;
+  }
+}
+@keyframes boxmove1 {
+  0% {
+    transform: translateX(1200px);
+  }
+  100% {
+    transform: translateX(-1200px);
+  }
+  //   100% {
+  //     transform: translateX(1200px);
+  //   }
+}
